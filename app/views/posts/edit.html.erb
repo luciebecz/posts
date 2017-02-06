@@ -1,0 +1,21 @@
+<!--generates a html form for that specific post -->
+<h1>
+  Editing: <%= @post.title %>
+</h1>
+
+<%= form_for @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+
+  <%= f.submit %>
+<% end %>
+
+<!--rails is smart enough to know that these fields already have values, and output them.-->
+
+<%= link_to 'Back', post_show_path(@post) %>

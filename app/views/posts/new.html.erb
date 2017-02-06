@@ -1,0 +1,22 @@
+<!-- this is where form will go to create a new post-->
+
+<h1>Create a New Post</h1>
+
+<%= form_for @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+
+  <%= f.submit %> <!-- creates a submit button for us -->
+<% end %>
+
+<%= link_to 'All Posts', root_path %>     <!-- <a href='/'>All Posts</a>
+
+
+
+

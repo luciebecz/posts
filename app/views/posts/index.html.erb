@@ -1,0 +1,12 @@
+<h1>All Posts</h1>
+<!--creating a loop for Post.all and making an li for each item inside the array, and showing it to the user-->
+<ul>
+  <% @posts.each do |post| %>
+    <li> <%= link_to post.title, post_show_path(post) %> </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Post', post_path %>
+
+
+  
